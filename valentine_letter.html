@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+  background-image: url(twitch.jpg);
+      background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        
+        .envelope {
+            background: white;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .letter-paper {
+            background: #faf8f3;
+            padding: 60px 50px;
+            border: 1px solid #137249;
+            background-image:
+                linear-gradient(transparent 0px, transparent 31px, #e8e3d8 31px, #e8e3d8 32px),
+                linear-gradient(90deg, transparent 0px, transparent 40px, #cfdeca 40px, #ffe0e0 41px);
+            background-size: 100% 32px, 41px 100%;
+            background-position: 0 10px, 0 0;
+            line-height: 32px;
+            position: relative;
+        }
+        
+        .letter-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: #faf8f3;
+        }
+        
+        .date {
+            text-align: right;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+            line-height: 32px;
+        }
+        
+        .greeting {
+            margin-bottom: 32px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .body-text {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 32px;
+            text-indent: 40px;
+        }
+        
+        .body-text.no-indent {
+            text-indent: 0;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a6933;
+            margin-bottom: 32px;
+            text-decoration: underline;
+            text-indent: 0;
+        }
+        
+        .checkbox-section {
+            margin: 32px 0 32px 40px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .checkbox-item {
+            margin-bottom: 8px;
+            line-height: 32px;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+        
+        .signature-section {
+            margin-top: 64px;
+            text-align: left;
+            padding-left: 300px;
+        }
+        
+        .signature-line {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 16px;
+            line-height: 32px;
+        }
+        
+        .signature-name {
+            border-bottom: 1px solid #999;
+            display: inline-block;
+            min-width: 200px;
+            padding: 0 10px;
+            color: #333;
+            line-height: 32px;
+        }
+        
+        .postscript {
+            margin-top: 32px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            line-height: 32px;
+        }
+        
+        .heart-decoration {
+            position: absolute;
+            color: #4b5b20;
+            font-size: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .heart-top-right {
+            top: 20px;
+            right: 30px;
+        }
+        
+        .heart-bottom-left {
+            bottom: 20px;
+            left: 30px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        
+        @media (max-width: 768px) {
+            .letter-paper {
+                padding: 40px 30px;
+            }
+            
+            .signature-section {
+                padding-left: 0;
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="letter-paper">
+            <div class="heart-decoration heart-top-right">sneaky sneaky</div>
+            <div class="heart-decoration heart-bottom-left">muahahha</div>
+            
+            <div class="date">February 14, 2026</div>
+            
+            <div class="greeting">Dear Naskiny,</div>
+            
+            <div class="title">Will You Be My Valentine?</div>
+            
+            <div class="body-text">
+               Do you want to glide on these pisslows in our lobby?
+            </div>
+            
+            <div class="body-text">
+                Here's the deal: I'll make you laugh and try my best to be the bestest yuumi in the World, you'll get my full attention and protection! As a perfect yuumi I WILL block all the damage from those noobs. :>
+            </div>
+            
+            <div class="body-text no-indent">
+                <strong>So what do you say? Will you be my Valentine?</strong>
+            </div>
+            
+            <div class="checkbox-section">
+                <div style="margin-bottom: 16px;"><strong>Check one:</strong></div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="yes1">
+                    <label for="yes1">Yes (Correct answer)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="yes2">
+                    <label for="yes2">Absolutely (Also correct)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="yes3">
+                    <label for="yes3">Of course (Still correct)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="maybe">
+                    <label for="maybe">Make me think about it (I'll wait...)</label>
+                </div>
+            </div>
+            
+            <div class="body-text">
+                No pressure though – okay, maybe a little pressure. But like, the fun kind!
+            </div>
+            
+            <div class="signature-section">
+                <div class="signature-line">Hoping you'll say yes,</div>
+                <div class="signature-line">
+                    <span class="signature-name">Linnie</span>
+                </div>
+            </div>
+            
+            <div class="postscript">
+                P.S. – If you say no, I will continue bullying you either way
+            </div>
+        </div>
+    </div>
+</body>
+</html>
